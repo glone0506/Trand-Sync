@@ -14,7 +14,6 @@ export default function Page() {
     <div>
         <ControlledCarousel />
         <TabBar />
-      <PostList posts={posts} />
     </div>
   );
 }

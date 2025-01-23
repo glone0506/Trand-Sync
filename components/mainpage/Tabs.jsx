@@ -1,8 +1,10 @@
 "use client";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
+import PostList from "./postList";
 
 function TabBar() {
+
   return (
     <Tabs
       defaultActiveKey="profile"
@@ -10,17 +12,17 @@ function TabBar() {
       className="mb-3"
       justify
     >
-      <Tab eventKey="home" title="Home">
-        Tab content for Home
+      <Tab eventKey="1" title="Home">
+        <PostList albumId={1} />
       </Tab>
-      <Tab eventKey="profile" title="Profile">
-        Tab content for Profile
+      <Tab eventKey="2" title="Profile">
+        <PostList albumId={2} />
       </Tab>
-      <Tab eventKey="longer-tab" title="Loooonger Tab">
-        Tab content for Loooonger Tab
+      <Tab eventKey="3-tab" title="Loooonger Tab">
+        <PostList albumId={3} />
       </Tab>
-      <Tab eventKey="contact" title="Contact">
-        Tab content for Contact
+      <Tab eventKey="4" title="Contact">
+        <PostList albumId={4} />
       </Tab>
     </Tabs>
   );
