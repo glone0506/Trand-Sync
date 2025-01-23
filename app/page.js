@@ -1,6 +1,6 @@
-import ControlledCarousel from "@/components/carousel";
+import ControlledCarousel from "@/components/mainpage/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
-import TabBar from "@/components/tabs";
+import TabBar from "@/components/mainpage/Tabs";
 
 const posts = [
   { id: 1, title: '첫 번째 게시물', content: '첫 게시물입니다.' },

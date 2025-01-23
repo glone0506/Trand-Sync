@@ -1,14 +1,14 @@
 "use client";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
-import PostList from "./postList";
+import PostList from "../postList";
 
 function TabBar() {
 
   return (
     <Tabs
-      defaultActiveKey="profile"
-      id="justify-tab-example"
+        defaultActiveKey="1"
+        id="justify-tab-example"
       className="mb-3"
       justify
     >
