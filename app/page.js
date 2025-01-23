@@ -1,3 +1,5 @@
+"use client";
+
 import ControlledCarousel from "@/components/mainpage/Carousel";
 import TabBar from "@/components/mainpage/Tabs";
 

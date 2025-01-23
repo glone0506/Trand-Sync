@@ -1,3 +1,4 @@
+"use client";
 import { Geist, Geist_Mono } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
@@ -5,6 +6,8 @@ import "./header.css";
 
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import MyVerticallyCenteredModal from "@/components/login/Login_modal";
+import { useState } from "react"; // useState 추가
 
 // Geist 폰트 설정
 const geistSans = Geist({
@@ -19,21 +22,28 @@ const geistMono = Geist_Mono({
 });
 
 export default function RootLayout({ children }) {
+  const [modalShow, setModalShow] = useState(false); // 모달 상태 관리
+
   return (
     <html lang="en">
       <head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>IT트랜드 싱크</title>
+        <title>IT트렌드 싱크</title>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="wrapper">
-          <Header />
+          <Header setModalShow={setModalShow} /> {/* setModalShow 전달 */}
           <main className="main-content">{children}</main>
           <Footer />
         </div>
+        {/* 모달 컴포넌트 렌더링 */}
+        <MyVerticallyCenteredModal
+          show={modalShow}
+          onHide={() => setModalShow(false)} // 모달 닫기
+        />
       </body>
     </html>
   );
