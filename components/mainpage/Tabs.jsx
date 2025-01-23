@@ -19,7 +19,7 @@ function TabBar() {
       <Tab eventKey="longer-tab" title="Loooonger Tab">
         Tab content for Loooonger Tab
       </Tab>
-      <Tab eventKey="contact" title="Contact" disabled>
+      <Tab eventKey="contact" title="Contact">
         Tab content for Contact
       </Tab>
     </Tabs>
