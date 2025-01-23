@@ -1,34 +1,19 @@
-import Carousels from "@/components/carousel";
+import ControlledCarousel from "@/components/mainpage/Carousel";
+import "bootstrap/dist/css/bootstrap.min.css";
+import TabBar from "@/components/mainpage/Tabs";
 
-const carouselData = [
-  {
-    ITEM_CD_DL: "1",
-    EXP_CVaRNTS: "Exp 1",
-    HR_ITEM_NM: "Item 1",
-    LOC: "Location 1",
-    ITEM_KR_NM: "아이템 1",
-  },
-  {
-    ITEM_CD_DL: "2",
-    EXP_CVaRNTS: "Exp 2",
-    HR_ITEM_NM: "Item 2",
-    LOC: "Location 2",
-    ITEM_KR_NM: "아이템 2",
-  },
-  {
-    ITEM_CD_DL: "3",
-    EXP_CVaRNTS: "Exp 3",
-    HR_ITEM_NM: "Item 3",
-    LOC: "Location 3",
-    ITEM_KR_NM: "아이템 3",
-  },
-  // 추가 데이터...
+const posts = [
+  { id: 1, title: '첫 번째 게시물', content: '첫 게시물입니다.' },
+  { id: 2, title: '두 번째 게시물', content: '두 번째 게시물입니다.' },
+  { id: 3, title: ' 세 번째 게시물', content: '세 번째 게시물입니다.' },
 ];
+
 
 export default function Page() {
   return (
     <div>
-      <Carousels carouselData={carouselData} />{" "}
+        <ControlledCarousel />
+        <TabBar />
     </div>
   );
 }
