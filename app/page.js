@@ -1,9 +1,11 @@
-import Example from "@/components/carousel";
-import "bootstrap/dist/css/bootstrap.min.css";
+import ControlledCarousel from "@/components/mainpage/Carousel";
+import TabBar from "@/components/mainpage/Tabs";
+
 export default function Page() {
   return (
     <div>
-      <Example />
+      <ControlledCarousel />
+      <TabBar />
     </div>
   );
 }
