@@ -2,7 +2,7 @@
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 
-function JustifiedExample() {
+function TabBar() {
   return (
     <Tabs
       defaultActiveKey="profile"
@@ -26,4 +26,4 @@ function JustifiedExample() {
   );
 }
 
-export default JustifiedExample;
+export default TabBar;
