@@ -1,6 +1,5 @@
-import ControlledCarousel from "@/components/carousel";
-import "bootstrap/dist/css/bootstrap.min.css";
-import TabBar from "@/components/tabs";
+import ControlledCarousel from "@/components/Carousel";
+import TabBar from "@/components/Tabs";
 
 export default function Page() {
   return (
