@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    appDir: true, // app 디렉토리 활성화
+    // appDir: true, // app 디렉토리 활성화
   },
 };
 
