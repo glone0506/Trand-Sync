@@ -1,8 +1,8 @@
 "use client";
 import { Geist, Geist_Mono } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./globals.css";
-import "./header.css";
+import "./css/globals.css";
+import "./css/header.css";
 
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";

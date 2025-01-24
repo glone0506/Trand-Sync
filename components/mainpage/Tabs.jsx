@@ -2,6 +2,8 @@
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import PostList from "../postList";
+import SkeletonLoader from "./Skeleton";
+import { Suspense } from "react";
 
 function TabBar() {
   return (
@@ -12,7 +14,9 @@ function TabBar() {
       justify
     >
       <Tab eventKey="1" title="Home">
-        <PostList albumId={1} />
+        <Suspense fallback={<SkeletonLoader />}>
+          <PostList albumId={1} />
+        </Suspense>
       </Tab>
       <Tab eventKey="2" title="Profile"></Tab>
       <Tab eventKey="3-tab" title="Loooonger Tab"></Tab>
