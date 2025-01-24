@@ -14,7 +14,7 @@ function ControlledCarousel() {
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
-          src="/cat10.png" // public 폴더에 위치한 이미지
+          src="\first.jpg" // public 폴더에 위치한 이미지
           className="d-block w-100"
           alt="First slide"
           style={{ maxHeight: "400px", objectFit: "cover" }} // 최대 높이를 400px로 설정하고 비율 유지
@@ -26,7 +26,7 @@ function ControlledCarousel() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          src="/cat11.png" // public 폴더에 위치한 이미지
+          src="\second.jpg" // public 폴더에 위치한 이미지
           className="d-block w-100"
           alt="Second slide"
           style={{ maxHeight: "400px", objectFit: "cover" }} // 최대 높이를 400px로 설정하고 비율 유지
@@ -38,7 +38,7 @@ function ControlledCarousel() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          src="/cat12.png" // public 폴더에 위치한 이미지
+          src="\third.jpg" // public 폴더에 위치한 이미지
           className="d-block w-100"
           alt="Third slide"
           style={{ maxHeight: "400px", objectFit: "cover" }} // 최대 높이를 400px로 설정하고 비율 유지

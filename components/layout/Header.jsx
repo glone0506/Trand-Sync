@@ -5,7 +5,7 @@ export default function Header({ setModalShow }) {
   return (
     <header className="header">
       <div className="logo">
-        <img src="/우리FIS - logo.png" alt="Logo" />
+        <img src="/logo.png" alt="Logo" />
       </div>
       <div className="auth-buttons">
         <button className="auth-login" onClick={() => setModalShow(true)}>

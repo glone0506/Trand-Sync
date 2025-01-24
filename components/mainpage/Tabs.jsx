@@ -24,5 +24,3 @@ function TabBar() {
     </Tabs>
   );
 }
-
-export default TabBar;
