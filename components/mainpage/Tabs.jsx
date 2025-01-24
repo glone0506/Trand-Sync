@@ -6,7 +6,7 @@ import SkeletonLoader from "./Skeleton";
 import OpenAI from "@/app/ui/mainpage/openai/OpenAI";
 import { Suspense } from "react";
 
-function TabBar() {
+export default function TabBar() {
   return (
     <Tabs
       defaultActiveKey="1"
