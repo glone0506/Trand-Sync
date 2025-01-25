@@ -1,7 +1,7 @@
 "use client";
 
 import ControlledCarousel from "@/components/mainpage/Carousel";
-import TabBar from "@/components/mainpage/Tabs";
+import TabBar from "@/app/ui/mainpage/Tabs";
 
 export default function Page() {
   return (

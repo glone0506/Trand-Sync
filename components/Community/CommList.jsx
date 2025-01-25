@@ -1,6 +1,7 @@
+
 import React from "react";
 
-const PostList = ({ posts, onDeletePost, onUpdatePost }) => {
+const CommList = ({ posts, onDeletePost, onUpdatePost }) => {
     return (
         <ul className="list-group">
             {posts.map((post) => (
@@ -40,4 +41,4 @@ const PostList = ({ posts, onDeletePost, onUpdatePost }) => {
     );
 };
 
-export default PostList;
+export default CommList;

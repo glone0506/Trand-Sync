@@ -1,8 +1,11 @@
 "use client";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
-import PostList from "../../../components/mainpage/postList";
+import PostList from "@/components/mainpage/PostList";
 import Community from "@/app/ui/mainpage/Community";
+import OpenAI from "@/app/ui/mainpage/openai/OpenAI";
+import SkeletonLoader from "@/components/mainpage/Skeleton";
+import {Suspense} from "react";
 
 function TabBar() {
   return (
@@ -13,12 +16,17 @@ function TabBar() {
       justify
     >
       <Tab eventKey="1" title="새소식">
-        <PostList albumId={1} />
+        <Suspense fallback={<SkeletonLoader />}>
+          <PostList albumId={1} />
+        </Suspense>
       </Tab>
       <Tab eventKey="2" title="커뮤니티">
        <Community/>
       </Tab>
-      <Tab eventKey="3-tab" title="싱크 AI"></Tab>
+      <Tab eventKey="3-tab" title="싱크 AI">
+      {/** AI 페이지 =*/}
+      <OpenAI />
+      </Tab>
       {/*<Tab eventKey="4" title="Contact"></Tab>*/}
     </Tabs>
   );

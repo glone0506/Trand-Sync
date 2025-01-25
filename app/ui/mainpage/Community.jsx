@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getPosts, createPost, deletePost, editPost } from "@/service/PostService";
 import PostForm from "@/components/Community/PostForm";
-import PostList from "@/components/Community/PostList";
+import CommList from "@/components/Community/CommList";
 
 const Community = () => {
     const [posts, setPosts] = useState([]);
@@ -67,20 +67,7 @@ const Community = () => {
             console.error("게시글 수정 실패:", error);
         }
     };
-    // const handleUpdatePost = async (updatedPost) => {
-    //     try {
-    //         const response = await editPost(updatedPost.id, updatedPost); // 업데이트 API 호출
-    //         setPosts(
-    //             posts.map((post) =>
-    //                 post.id === updatedPost.id ? response.data : post
-    //             )
-    //         ); // posts 상태 업데이트
-    //         setEditingPost(null); // 수정 상태 초기화
-    //         setShowForm(false); // 폼 닫기
-    //     } catch (error) {
-    //         console.error("Error updating post:", error);
-    //     }
-    // };
+
 
 
     const handleEditPost = (post) => {
@@ -104,7 +91,7 @@ const Community = () => {
                         게시글 등록
                     </button>
                    </div>
-                    <PostList posts={posts} onDeletePost={handleDeletePost} onUpdatePost={handleEditPost} />
+                    <CommList posts={posts} onDeletePost={handleDeletePost} onUpdatePost={handleEditPost} />
                 </>
                 )}
                 </div>
