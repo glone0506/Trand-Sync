@@ -17,7 +17,7 @@ function TabBar() {
     >
       <Tab eventKey="1" title="새소식">
         <Suspense fallback={<SkeletonLoader />}>
-          <PostList albumId={1} />
+          <PostList  />
         </Suspense>
       </Tab>
       <Tab eventKey="2" title="커뮤니티">
