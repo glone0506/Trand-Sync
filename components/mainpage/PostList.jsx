@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
-export default function PostList({ albumId }) {
+export default function PostList({  }) {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -11,11 +11,12 @@ export default function PostList({ albumId }) {
     const fetchPosts = async () => {
       try {
         const response = await fetch(
-          "https://jsonplaceholder.typicode.com/photos"
+            // "https://jsonplaceholder.typicode.com/photos"
+            "https://picsum.photos/v2/list"
         );
         const data = await response.json();
-        const filteredPosts = data.filter((post) => post.albumId === albumId);
-        setPosts(filteredPosts);
+        // const filteredPosts = data.filter((post) => post.id === id);
+        setPosts(data);
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
@@ -24,34 +25,42 @@ export default function PostList({ albumId }) {
     };
 
     fetchPosts();
-  }, [albumId]);
+  }, []);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <p className="text-center mt-5">Loading...</p>;
   }
 
   return (
-    <ul>
-      {posts.map((post) => (
-        <Link href={`newspage/${post.id}`} key={post.id}>
-          <li
-            key={post.id}
-            className="list-group-item d-flex align-items-center"
-          >
-            <img
-              src={post.thumbnailUrl}
-              alt={post.title}
-              className="img-thumbnail me-3"
-              style={{ width: "100px", height: "100px", objectFit: "cover" }}
-            />
-
-            <div className="align-items-center">
-              <h5>{post.title}</h5>
-              <p>Album ID: {post.albumId}</p>
-            </div>
-          </li>
-        </Link>
-      ))}
-    </ul>
+      <div className="container mt-4">
+        <ul className="list-unstyled row g-4">
+          {posts.map((post) => (
+              <li
+                  key={post.id}
+                  className="col-md-4 col-sm-6 d-flex align-items-stretch"
+              >
+                <Link
+                    href={`newspage/${post.id}`}
+                    className="card shadow-sm text-decoration-none"
+                    style={{ width: "100%" }}
+                >
+                  <img
+                      src={post.download_url}
+                      alt={post.author}
+                      className="card-img-top"
+                      style={{
+                        height: "200px",
+                        objectFit: "cover",
+                      }}
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title text-truncate">{post.author}</h5>
+                    {/*<p className="card-text text-muted">Album ID: {post.albumId}</p>*/}
+                  </div>
+                </Link>
+              </li>
+          ))}
+        </ul>
+      </div>
   );
 }
