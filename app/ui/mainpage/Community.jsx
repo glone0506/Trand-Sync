@@ -69,12 +69,10 @@ const Community = () => {
     };
 
 
-
     const handleEditPost = (post) => {
         setEditingPost(post); // 수정할 게시글 설정
         setShowForm(true); // 폼 열기
     };
-
 
     return  (
         <div>
@@ -85,7 +83,7 @@ const Community = () => {
                 <div className="flex justify-end ">
                     <button
                         onClick={() => setShowForm(true)}// 버튼 클릭 시 폼 열기
-                        className="px-4 py-2 bg-purple-700 text-white rounded-lg hover:bg-purple-500 shadow-md transition duration-200"
+                        className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 shadow-md transition duration-200"
                         style={{marginBottom: "20px"}}
                     >
                         게시글 등록

@@ -28,7 +28,7 @@ const PostForm = ({ onAddPost,onUpdatePost,onClose,editingPost }) => {
     return (
         <form
             onSubmit={handleSubmit}
-            className="max-w-lg mx-auto bg-white shadow-md rounded-lg p-6 space-y-4"
+            className="max-w-lg mx-auto bg-white shadow-2xl rounded-lg p-6 space-y-4"
         >
             <h2 className="text-2xl font-bold text-gray-800 text-center">   {editingPost ? "게시글 수정" : "게시글 등록"}</h2>
             <div className="space-y-2">
