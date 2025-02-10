@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-const OpenAI = () => {
+const page = () => {
   const [inputText, setInputText] = useState("");
   const [response, setResponse] = useState("");
   const [loading, setLoading] = useState(false);
@@ -115,4 +115,4 @@ const OpenAI = () => {
   );
 };
 
-export default OpenAI;
+export default page;

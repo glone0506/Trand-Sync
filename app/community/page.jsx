@@ -1,9 +1,10 @@
+'use client'
 import React, { useState, useEffect } from "react";
 import { getPosts, createPost, deletePost, editPost } from "@/service/PostService";
 import PostForm from "@/components/Community/PostForm";
 import CommList from "@/components/Community/CommList";
 
-const Community = () => {
+const Page = () => {
     const [posts, setPosts] = useState([]);
     const [showForm, setShowForm] = useState(false);
     const [editingPost, setEditingPost] = useState(null);
@@ -23,15 +24,7 @@ const Community = () => {
 
         fetchPosts();
     }, []);
-    //
-    // const handleAddPost = async (newPost) => {
-    //     try {
-    //         const response = await createPost(newPost);
-    //         setPosts([response.data, ...posts]); // 새 게시글 추가
-    //     } catch (error) {
-    //         console.error("Error adding post:", error);
-    //     }
-    // };
+
 
     const handleAddPost = async (newPost) => {
         try {
@@ -96,4 +89,4 @@ const Community = () => {
             );
             };
 
-            export default Community;
+            export default Page;
