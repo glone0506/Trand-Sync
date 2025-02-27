@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import "../../app/css/skeletonloader.css";
+import "../../css/skeletonloader.css";
 
 function SkeletonLoader() {
   return (
