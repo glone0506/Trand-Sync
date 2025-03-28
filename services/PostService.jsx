@@ -293,7 +293,7 @@ AI 연산 성능이 크게 강화되었고, 배터리 효율도 개선되었다�
 // (1) 네이버 뉴스 API에서 데이터 가져오기
 export async function fetchPosts() {
     try {
-        const response = await fetch("http://192.168.0.57/news/it");
+        const response = await fetch("http://192.168.0.57:9091/news/it");
 
         if (!response.ok) {
             throw new Error("네이버 뉴스 API 요청 실패");
