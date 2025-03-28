@@ -4,8 +4,8 @@ import { ChatFill } from "react-bootstrap-icons"; // 아이콘 import
 
 export default function CustomModal(props) {
   // 카카오 로그인 URL을 하드코딩한 API 키와 리다이렉트 URI로 설정
-  const kakaoAPIKey = "d9c6c50b0ff436053e2ffa56d9e6fc9d"; // 여기에 실제 API 키를 입력하세요
-  const redirectURI = "http://localhost:3000"; // 리다이렉트 URI 설정
+  const kakaoAPIKey = "c4e79ae4a9131ca930285da22587695f"; // 여기에 실제 API 키를 입력하세요
+  const redirectURI = "http://localhost:3000/auth/callback"; // 리다이렉트 URI 설정
 
   const kakaoURL = `https://kauth.kakao.com/oauth/authorize?client_id=${kakaoAPIKey}&redirect_uri=${redirectURI}&response_type=code`;
 

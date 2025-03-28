@@ -1,30 +1,25 @@
 "use client";
 
-import React, { useState } from "react";
+import React, {useState} from "react";
 import PostList from "@/app/ui/mainpage/PostList";
 
 export default function CategoryBar() {
     const categories = [
-        { id: "all", name: "전체", icon: "📢" },
-        { id: "ai", name: "인공지능", icon: "🧠" },
-        { id: "webdev", name: "웹 개발", icon: "💻" },
-        { id: "cloud", name: "클라우드", icon: "☁️" },
-        { id: "security", name: "보안", icon: "🔒" },
+        {id: "all", name: "전체", icon: "📢"},
+        {id: "ai", name: "인공지능", icon: "🧠"},
+        {id: "webdev", name: "웹 개발", icon: "💻"},
+        {id: "cloud", name: "클라우드", icon: "☁️"},
+        {id: "security", name: "보안", icon: "🔒"},
     ];
 
     const [selectedCategory, setSelectedCategory] = useState(categories[0].id);
 
     return (
         <div className="w-full max-w-4xl mx-auto mt-1">
-            <div className="bg-white rounded-2xl  border-gray-200 p-6">
-                {/* Header */}
-                <div className="flex items-center justify-between mb-6">
-                    <h3 className="text-xl font-bold text-gray-900">
-                        카테고리별 보기
-                    </h3>
-                    <span className="text-sm text-gray-500">
-            {categories.find(cat => cat.id === selectedCategory)?.name} 선택됨
-          </span>
+            <div className="bg-white rounded-2xl border-gray-200 p-6">
+                {/* Header with spacing */}
+                <div className="mb-6 h-8 flex items-center">
+                    {/* Empty space for header alignment */}
                 </div>
 
                 {/* Category Buttons */}
@@ -67,12 +62,13 @@ export default function CategoryBar() {
 
                 {/* Content Area */}
                 <div className="relative">
-                    <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
+                    <div
+                        className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"/>
 
                     <div className="pt-6">
                         {selectedCategory === "all" && (
                             <div className="animate-fadeIn">
-                                <PostList />
+                                <PostList/>
                             </div>
                         )}
                         {selectedCategory === "ai" && (

@@ -8,7 +8,6 @@ import Header from "@/app/ui/layout/Header";
 import Footer from "@/app/ui/layout/Footer";
 import MyVerticallyCenteredModal from "@/app/ui/login/Login_modal";
 import { useState } from "react";
-import DarkButton from "@/app/ui/mainpage/DarkButton"; // useState 추가
 
 // Geist 폰트 설정
 const geistSans = Geist({
@@ -40,7 +39,6 @@ export default function RootLayout({ children }) {
         {/*<div className="wrapper">*/}
           <Header setModalShow={setModalShow} /> {/* setModalShow 전달 */}
           <main className="min-h-screen bg-transparent">{children}</main>
-             <DarkButton />
           <Footer />
         {/*</div>*/}
         {/* 모달 컴포넌트 렌더링 */}
